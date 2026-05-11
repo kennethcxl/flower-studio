@@ -9,6 +9,17 @@ export const FLOWER_TYPES = [
   "Hydrangea",
 ] as const;
 
+export const FLOWER_CHIP_IMAGES = {
+  Rose: "/flower-chips/rose.png",
+  Tulip: "/flower-chips/tulip.png",
+  Lily: "/flower-chips/lily.png",
+  "Baby's breath": "/flower-chips/babys-breath.png",
+  Carnation: "/flower-chips/carnation.png",
+  Sunflower: "/flower-chips/sunflower.png",
+  Peony: "/flower-chips/peony.png",
+  Hydrangea: "/flower-chips/hydrangea.png",
+} satisfies Record<(typeof FLOWER_TYPES)[number], string>;
+
 export const WRAPPER_MATERIALS = ["Matte paper", "Kraft paper", "Tissue", "Mesh"] as const;
 
 export const BOW_MATERIALS = ["Satin", "Organza", "Twine", "Velvet"] as const;

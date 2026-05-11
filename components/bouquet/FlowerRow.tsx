@@ -3,7 +3,7 @@
 import { Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import { FLOWER_TYPES, getFlowerColorOptions } from "@/lib/constants";
+import { FLOWER_CHIP_IMAGES, FLOWER_TYPES, getFlowerColorOptions } from "@/lib/constants";
 import type { FlowerItem } from "@/types/bouquet";
 import { ColorSwatch } from "./ColorSwatch";
 import { OptionChip } from "./OptionChip";
@@ -54,7 +54,13 @@ export function FlowerRow({ flower, canRemove, onChange, onRemove }: FlowerRowPr
 
       <div className="mb-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
         {FLOWER_TYPES.map((type) => (
-          <OptionChip key={type} label={type} selected={flower.type === type} onClick={() => selectFlowerType(type)} />
+          <OptionChip
+            key={type}
+            imageSrc={FLOWER_CHIP_IMAGES[type]}
+            label={type}
+            selected={flower.type === type}
+            onClick={() => selectFlowerType(type)}
+          />
         ))}
       </div>
 
